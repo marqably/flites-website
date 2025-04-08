@@ -1,0 +1,50 @@
+# Keep existing ignores
+.history
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json # Optional: Keep if you want to lock dependencies, ignore if not
+yarn.lock         # Optional: Keep if you want to lock dependencies, ignore if not
+
+# Build artifacts / Output directories
+dist/
+build/
+public/ # Or whatever your build output folder is named
+.parcel-cache/ # If using Parcel
+.next/ # If using Next.js
+.nuxt/ # If using Nuxt.js
+out/
+
+# Log files
+*.log
+logs/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.template
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary files
+*~
+*.tmp

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="38px" viewBox="0 0 32 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 11</title>
+    <g id="Startseite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Startseite-2" transform="translate(-165, -3906)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Group-19" transform="translate(146, 3890)">
+                <g id="Group-11" transform="translate(20, 17)">
+                    <path d="M15.625,24.7064907 C15.2808488,25.0506419 14.7191512,25.0506419 14.375,24.7064907 L8.125,18.4564907 C7.78084879,18.1123395 7.78084879,17.5506419 8.125,17.2064907 L14.375,10.9564907 C14.7191512,10.6123395 15.2808488,10.6123395 15.625,10.9564907 L21.875,17.2064907 C22.2191512,17.5506419 22.2191512,18.1123395 21.875,18.4564907 L15.625,24.7064907 Z" id="Stroke-1"></path>
+                    <polyline id="Stroke-3" points="14.3398716 0 18.2949358 2.83166904 14.3398716 5.66333809"></polyline>
+                    <path d="M0,17.831669 C0,9.54707561 6.71540656,2.83166904 15,2.83166904 L18.2952924,2.83166904" id="Stroke-5"></path>
+                    <polyline id="Stroke-7" points="15.6601284 35.6633381 11.7050642 32.831669 15.6601284 30"></polyline>
+                    <path d="M30,17.831669 C30,26.1162625 23.2845934,32.831669 15,32.831669 L11.7047076,32.831669" id="Stroke-9"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

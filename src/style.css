@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add custom styles below */
+body {
+    @apply bg-gradient-radial from-brand-purple-darkest to-brand-purple-middark font-sans;
+}
+
+.container {
+    @apply px-4 md:px-6 lg:px-8 mx-auto;
+    max-width:1300px;
+}
+
+.container-lg {
+    @apply px-4 md:px-6 lg:px-8 mx-auto;
+    max-width:1400px;
+}
+
+/* Remove Tiny Slider base CSS import if you had one */
+/* Remove Custom Tiny Slider styles */
+/*
+.tns-nav {
+    @apply text-center mt-4;
+}
+.tns-nav button {
+    @apply w-3 h-3 bg-brand-gray-medium rounded-full mx-1 p-0 border-none;
+}
+.tns-nav button.tns-nav-active {
+    @apply bg-brand-purple-light;
+}
+*/
+
+/* Style for the connecting lines (example) */
+.feature-connector::before {
+    content: '';
+    @apply absolute left-1/2 -translate-x-1/2 top-full w-0.5 h-16 bg-brand-purple-light;
+}
+
+.feature-item:last-child .feature-connector::before {
+    @apply hidden; /* Hide connector on the last item */
+}
+
+/* Adjust connector position for alternating layout */
+.feature-item:nth-child(even) .feature-connector {
+   /* Potentially adjust if needed, depends on exact layout */
+}
+
+/* ===== Gradient Border Button Component ===== */
+@layer components {
+    .btn-gradient-border {
+        @apply relative inline-flex p-[2px] rounded-[15px] /* Outer padding creates border thickness - Using arbitrary value */;
+        @apply bg-gradient-to-r from-brand-purple-light to-brand-cyan; /* Gradient background for the border */
+        @apply text-white font-semibold no-underline transition duration-200;
+        @apply hover:opacity-90; /* Optional: Hover effect */
+    }
+    .btn-gradient-border-inner {
+        @apply block bg-brand-purple-dark px-5 py-2 rounded-[15px]; /* Inner background, padding, and rounding - Using arbitrary value */
+        @apply transition duration-200;
+        @apply hover:bg-brand-purple-dark/30 hover:bg-gradient-to-l hover:from-brand-purple-light/20 hover:to-brand-cyan/20;
+        @apply flex items-center justify-center;
+    }
+    /* Optional: Slightly different hover for inner part if needed */
+    /* .btn-gradient-border:hover .btn-gradient-border-inner {
+        @apply bg-opacity-90;
+    } */
+
+    .btn-info-border {
+        @apply relative inline-flex p-2 px-5 rounded-[15px];
+        @apply border-2 border-white/50 border-solid;
+        @apply text-white font-semibold no-underline transition duration-200;
+        @apply opacity-80;
+        @apply hover:opacity-100 hover:border-white/70;
+    }
+}
+
+/* ===== Gradient Text Component ===== */
+@layer components {
+    .text-gradient-brand {
+        @apply bg-gradient-to-r from-brand-purple-light to-brand-cyan text-transparent bg-clip-text;
+    }
+} 
+
+/* ===== Screenshot Slider ===== */
+@layer components {
+    /* Adapt styles for Splide slide elements */
+    .screenshot-slide-item { /* Keep your custom class for styling */
+        @apply border-brand-purple-highlight border-8 rounded-2xl;
+        box-shadow: 0 0 15px theme('colors.brand-purple-highlight / 90%');
+        /* Add transition for smooth opacity change */
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    /* Style for visible but inactive slides */
+    .splide__slide {
+        @apply opacity-40 scale-95; 
+    }
+
+    /* Style for the active (centered) slide */
+    .splide__slide.is-active {
+        @apply opacity-100 scale-100; /* Ensure active slide is fully opaque */
+    }
+}
+
+.splide__pagination__page {
+    display:inline-block!important;
+    width:13px!important;
+    height:13px!important;
+    margin:0 6px!important;
+    background-color:transparent!important;
+    border:2px solid #fff!important;
+    transition:all 0.3s ease-in-out!important;
+}
+
+.splide__pagination__page.is-active {
+    background-color:#fff!important;
+    border:2px solid #fff!important;
+}
+
+/* ===== Feature items ===== */
+
+@layer components {
+    .feature-item {
+        @apply relative;
+    }
+
+    .feature-item-inner {
+        @apply grid md:grid-cols-2 gap-12 items-center relative;
+        z-index: 1;
+    }
+    
+    .feature-item-right:after,
+    .feature-item-left:after {
+        content: '';
+        background-image: url('../assets/images/workflow-bubble.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center right;
+        top: -40%;
+        bottom: -40%;
+        aspect-ratio: 1/1;
+        position: absolute;
+        right: 0;
+        transform: translateX(40%);
+        z-index: 0;
+    }
+    
+    .feature-item-right:after {
+        right:auto;
+        left:0;
+        transform: translateX(-40%);
+    }
+.feature-item-right:first-child:after,
+.feature-item-left:first-child:after,
+.feature-item-right:last-child:after,
+.feature-item-left:last-child:after {
+        display:none;
+    }
+
+}

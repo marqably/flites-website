@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="47px" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 9</title>
+    <g id="Startseite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.7">
+        <g id="Startseite-2" transform="translate(-1052, -6016)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Group-31" transform="translate(450, 5774)">
+                <g id="Group-33" transform="translate(0, 228)">
+                    <g id="Group-32" transform="translate(551, 15)">
+                        <g id="Group-9" transform="translate(52, 0)">
+                            <path d="M22.5,0 C34.926039,0 45,10.073961 45,22.5 C45,34.9278236 34.926039,45.0017846 22.5,45.0017846 C10.073961,45.0017846 0,34.9278236 0,22.5 C0,10.073961 10.073961,0 22.5,0 Z" id="Stroke-1"></path>
+                            <path d="M22.5,0 C28.0803855,0 32.6042989,10.073961 32.6042989,22.5 C32.6042989,34.9278236 28.0803855,45.0017846 22.5,45.0017846 C16.9196145,45.0017846 12.3957011,34.9278236 12.3957011,22.5 C12.3957011,10.073961 16.9196145,0 22.5,0 Z" id="Stroke-3"></path>
+                            <line x1="1.32665768" y1="14.8689523" x2="43.6729854" y2="14.8689523" id="Stroke-5"></line>
+                            <line x1="1.32665768" y1="30.1326539" x2="43.6729854" y2="30.1326539" id="Stroke-7"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
