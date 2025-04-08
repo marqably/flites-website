@@ -9,12 +9,12 @@ body {
 
 .container {
     @apply px-4 md:px-6 lg:px-8 mx-auto;
-    max-width:1300px;
+    max-width: 1300px;
 }
 
 .container-lg {
     @apply px-4 md:px-6 lg:px-8 mx-auto;
-    max-width:1400px;
+    max-width: 1400px;
 }
 
 /* Remove Tiny Slider base CSS import if you had one */
@@ -38,33 +38,39 @@ body {
 }
 
 .feature-item:last-child .feature-connector::before {
-    @apply hidden; /* Hide connector on the last item */
+    @apply hidden;
+    /* Hide connector on the last item */
 }
 
 /* Adjust connector position for alternating layout */
 .feature-item:nth-child(even) .feature-connector {
-   /* Potentially adjust if needed, depends on exact layout */
+    /* Potentially adjust if needed, depends on exact layout */
 }
 
 /* ===== Gradient Border Button Component ===== */
 @layer components {
     .btn-gradient-border {
-        @apply relative inline-flex p-[2px] rounded-[15px] /* Outer padding creates border thickness - Using arbitrary value */;
-        @apply bg-gradient-to-r from-brand-purple-light to-brand-cyan; /* Gradient background for the border */
+        @apply relative inline-flex p-[2px] rounded-[15px] /* Outer padding creates border thickness - Using arbitrary value */
+        ;
+        @apply bg-gradient-to-r from-brand-purple-light to-brand-cyan;
+        /* Gradient background for the border */
         @apply text-white font-semibold no-underline transition duration-200;
-        @apply hover:opacity-90; /* Optional: Hover effect */
+        @apply hover:opacity-90;
+        /* Optional: Hover effect */
     }
+
     .btn-gradient-border-inner {
-        @apply block bg-brand-purple-dark px-5 py-2 rounded-[15px]; /* Inner background, padding, and rounding - Using arbitrary value */
+        @apply block bg-brand-purple-dark px-5 py-2 rounded-[15px];
+        /* Inner background, padding, and rounding - Using arbitrary value */
         @apply transition duration-200;
         @apply hover:bg-brand-purple-dark/30 hover:bg-gradient-to-l hover:from-brand-purple-light/20 hover:to-brand-cyan/20;
         @apply flex items-center justify-center;
     }
+
     /* Optional: Slightly different hover for inner part if needed */
     /* .btn-gradient-border:hover .btn-gradient-border-inner {
         @apply bg-opacity-90;
     } */
-
     .btn-info-border {
         @apply relative inline-flex p-2 px-5 rounded-[15px];
         @apply border-2 border-white/50 border-solid;
@@ -79,7 +85,7 @@ body {
     .text-gradient-brand {
         @apply bg-gradient-to-r from-brand-purple-light to-brand-cyan text-transparent bg-clip-text;
     }
-} 
+}
 
 /* ===== Screenshot Slider ===== */
 @layer components {
@@ -93,42 +99,43 @@ body {
 
     /* Style for visible but inactive slides */
     .splide__slide {
-        @apply opacity-40 scale-95; 
+        @apply opacity-40 scale-95;
     }
 
     /* Style for the active (centered) slide */
     .splide__slide.is-active {
-        @apply opacity-100 scale-100; /* Ensure active slide is fully opaque */
+        @apply opacity-100 scale-100;
+        /* Ensure active slide is fully opaque */
     }
 }
 
 .splide__pagination__page {
-    display:inline-block!important;
-    width:13px!important;
-    height:13px!important;
-    margin:0 6px!important;
-    background-color:transparent!important;
-    border:2px solid #fff!important;
-    transition:all 0.3s ease-in-out!important;
+    display: inline-block !important;
+    width: 13px !important;
+    height: 13px !important;
+    margin: 0 6px !important;
+    background-color: transparent !important;
+    border: 2px solid #fff !important;
+    transition: all 0.3s ease-in-out !important;
 }
 
 .splide__pagination__page.is-active {
-    background-color:#fff!important;
-    border:2px solid #fff!important;
+    background-color: #fff !important;
+    border: 2px solid #fff !important;
 }
 
 /* ===== Feature items ===== */
 
 @layer components {
     .feature-item {
-        @apply relative;
+        @apply relative py-10;
     }
 
     .feature-item-inner {
-        @apply grid md:grid-cols-2 gap-12 items-center relative;
+        @apply grid md:grid-cols-2 gap-12 items-start relative justify-start;
         z-index: 1;
     }
-    
+
     .feature-item-right:after,
     .feature-item-left:after {
         content: '';
@@ -136,25 +143,25 @@ body {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center right;
-        top: -40%;
-        bottom: -40%;
+        top: -70%;
+        bottom: -70%;
         aspect-ratio: 1/1;
         position: absolute;
         right: 0;
-        transform: translateX(40%);
+        transform: translateX(55%);
         z-index: 0;
     }
-    
+
     .feature-item-right:after {
         right:auto;
         left:0;
-        transform: translateX(-40%);
-    }
-.feature-item-right:first-child:after,
-.feature-item-left:first-child:after,
-.feature-item-right:last-child:after,
-.feature-item-left:last-child:after {
-        display:none;
+        transform: translateX(-55%);
     }
 
+    .feature-item-right:first-child:after,
+    .feature-item-left:first-child:after,
+    .feature-item-right:last-child:after,
+    .feature-item-left:last-child:after {
+        display:none;
+    }
 }
