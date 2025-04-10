@@ -3,7 +3,7 @@
     <defs>
         <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-qzvh6cugpv-1">
             <stop stop-color="#000000" offset="0%"></stop>
-            <stop stop-color="#140039" offset="100%"></stop>
+            <stop stop-color="#140039" stop-opacity="0" offset="100%"></stop>
         </radialGradient>
     </defs>
     <g id="Startseite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

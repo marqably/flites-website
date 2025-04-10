@@ -2,9 +2,109 @@
 @tailwind components;
 @tailwind utilities;
 
+/* parkinsans-300 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Parkinsans';
+    font-style: normal;
+    font-weight: 300;
+    /* Corresponds to font-parkinsans-300 */
+    src: url('./fonts/parkinsans-v1-latin-300.woff2') format('woff2');
+}
+
+/* parkinsans-500 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Parkinsans';
+    font-style: normal;
+    font-weight: 500;
+    /* Corresponds to font-parkinsans-500 */
+    src: url('./fonts/parkinsans-v1-latin-500.woff2') format('woff2');
+}
+
+/* parkinsans-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Parkinsans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/parkinsans-v1-latin-600.woff2') format('woff2');
+}
+
+/* parkinsans-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Parkinsans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/parkinsans-v1-latin-700.woff2') format('woff2');
+}
+
+.font-sans-* {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+          "slnt" 0,
+          "wdth" 100,
+          "GRAD" 0,
+          "XOPQ" 96,
+          "XTRA" 468,
+          "YOPQ" 79,
+          "YTAS" 750,
+          "YTDE" -203,
+          "YTFI" 738,
+          "YTLC" 514,
+          "YTUC" 712;
+}
+
+.font-sans-300 {
+    font-weight: 300;
+}
+.font-sans-400 {
+    font-weight: 400;
+}
+.font-sans-500 {
+    font-weight: 500;
+}
+.font-sans-600 {
+    font-weight: 600;
+}
+
+
 /* Add custom styles below */
-body {
-    @apply bg-gradient-radial from-brand-purple-darkest to-brand-purple-middark font-sans;
+@layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading font-semibold text-white;
+        line-height:1.3em!important;
+    }
+
+    /*!* Optional: Define specific weights if needed more granularly *!*/
+    .font-roboto-300 {
+        @apply font-sans font-light;
+    }
+
+    .font-roboto-400 {
+        @apply font-sans font-normal;
+    }
+
+    .font-roboto-600 {
+        @apply font-sans font-semibold;
+    }
+
+    .font-parkinsans-500 {
+        @apply font-heading font-medium;
+    }
+
+    /* .font-parkinsans-600 is default via h tags */
+    .font-parkinsans-700 {
+        @apply font-heading font-semibold;
+    }
 }
 
 .container {
@@ -47,16 +147,35 @@ body {
     /* Potentially adjust if needed, depends on exact layout */
 }
 
-/* ===== Gradient Border Button Component ===== */
+/* ===== Button & Gradient Border Button Component ===== */
+@layer components {
+    .nav-item {
+        @apply hover:text-white hover:underline;
+        font-size:1.188rem;
+        line-height:1em;
+        white-space: nowrap;
+    }
+
+    .btn {
+        @apply relative inline-flex px-5 py-2 rounded-[15px] items-center;
+        @apply border-2 border-brand-purple-medium border-solid;
+        @apply text-white font-semibold no-underline transition duration-200;
+        @apply bg-brand-purple-light hover:bg-brand-purple-medium;
+        font-size:1.188rem;
+        line-height:1em;
+        white-space: nowrap;
+    }
+}
+
 @layer components {
     .btn-gradient-border {
-        @apply relative inline-flex p-[2px] rounded-[15px] /* Outer padding creates border thickness - Using arbitrary value */
-        ;
-        @apply bg-gradient-to-r from-brand-purple-light to-brand-cyan;
-        /* Gradient background for the border */
-        @apply text-white font-semibold no-underline transition duration-200;
+        @apply relative inline-flex p-[2px] rounded-[15px];
         @apply hover:opacity-90;
-        /* Optional: Hover effect */
+        @apply text-white font-semibold no-underline transition duration-200;
+        @apply bg-gradient-to-r from-brand-purple-light to-brand-cyan;
+        font-size:1.188rem;
+        line-height:1em;
+        white-space: nowrap;
     }
 
     .btn-gradient-border-inner {
@@ -71,12 +190,20 @@ body {
     /* .btn-gradient-border:hover .btn-gradient-border-inner {
         @apply bg-opacity-90;
     } */
-    .btn-info-border {
-        @apply relative inline-flex p-2 px-5 rounded-[15px];
-        @apply border-2 border-white/50 border-solid;
+    .btn-info-border,
+    .btn-info-border-hidden {
+        @apply relative inline-flex p-2 px-5 rounded-[15px] items-center;
         @apply text-white font-semibold no-underline transition duration-200;
         @apply opacity-80;
+        @apply border-2 border-white/0 border-solid;
         @apply hover:opacity-100 hover:border-white/70;
+        font-size:1.188rem;
+        line-height:1em;
+        white-space: nowrap;
+    }
+
+    .btn-info-border {
+        @apply border-white/50;
     }
 }
 
@@ -128,16 +255,13 @@ body {
 
 @layer components {
     .feature-item {
-        @apply relative py-10;
+        --featureIconSize: 4rem;
+        @apply relative;
     }
 
-    .feature-item-inner {
-        @apply grid md:grid-cols-2 gap-12 items-start relative justify-start;
-        z-index: 1;
-    }
-
-    .feature-item-right:after,
-    .feature-item-left:after {
+    /*.feature-item:nth-child(odd):after,
+    .feature-item:nth-child(even):after {*/
+    .feature-item-bubble {
         content: '';
         background-image: url('../assets/images/workflow-bubble.svg');
         background-size: contain;
@@ -149,19 +273,173 @@ body {
         position: absolute;
         right: 0;
         transform: translateX(55%);
-        z-index: 0;
     }
 
-    .feature-item-right:after {
-        right:auto;
-        left:0;
+    .feature-item:nth-child(odd) .feature-item-bubble {
+        right: auto;
+        left: 0;
         transform: translateX(-55%);
     }
 
-    .feature-item-right:first-child:after,
-    .feature-item-left:first-child:after,
-    .feature-item-right:last-child:after,
-    .feature-item-left:last-child:after {
-        display:none;
+    .feature-item:first-child .feature-item-bubble,
+    .feature-item:last-child .feature-item-bubble {
+        display: none;
     }
+
+    .feature-item:nth-child(odd):first-child:after,
+    .feature-item:nth-child(even):first-child:after,
+    .feature-item:nth-child(odd):last-child:after,
+    .feature-item:nth-child(even):last-child:after {
+        display: none;
+    }
+
+    .feature-item-inner {
+        @apply grid md:grid-cols-2 items-start relative justify-start;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .feature-item:first-child .feature-item-inner {
+        z-index: unset;
+    }
+
+    .feature-title {
+        @apply text-3xl font-bold text-white mb-5;
+    }
+
+    .feature-item:nth-child(odd) .feature-item-inner {
+        @apply flex-row-reverse;
+    }
+
+    .feature-body {
+        @apply flex-1 relative;
+        max-width: 350px;
+        z-index: 10;
+    }
+
+    .feature-body p {
+        @apply text-brand-gray-light mb-4;
+    }
+
+    .feature-screenshot {
+        @apply py-20;
+        flex: 1;
+    }
+
+    .feature-item-content {
+        @apply text-center md:text-left flex gap-5 justify-stretch pt-32 py-10 relative;
+        flex: 1;
+    }
+
+    .feature-item:nth-child(odd) .feature-item-content {
+        border: 2px solid #CDB9F4;
+        border-right: 0;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .feature-icon-outer {
+        @apply relative inline-block;
+        transform: translate(-50%, 0);
+        z-index: 12;
+    }
+
+    .feature-icon {
+        @apply text-xl bg-brand-purple-light text-brand-gray-light rounded-full flex items-center justify-center;
+        box-shadow: 0 0 15px theme('colors.brand-purple-highlight / 70%');
+        width: var(--featureIconSize);
+        height: var(--featureIconSize);
+    }
+
+    .feature-item:nth-child(odd) {
+        margin-top: -2px;
+    }
+
+    .feature-item:nth-child(even) .feature-screenshot {
+        border: 2px solid #CDB9F4;
+        border-left: 0;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        margin-left: 95px;
+        margin-top: -2px;
+    }
+
+    .feature-item:nth-child(even) .placeholder-aspect {
+        position: relative;
+        left: -70px;
+    }
+
+    .feature-item:first-child .feature-item-content {
+        border-top: 0;
+        border-top-left-radius: 0;
+    }
+
+    .feature-screenshot {
+        position: relative;
+        z-index: 10;
+    }
+
+
+    .feature-item:first-child::before,
+    .feature-item:last-child::before {
+        content: ' ';
+        position: absolute;
+        width: 7px;
+        margin-left: -2px;
+        @apply bg-brand-purple-middark;
+        z-index: 2;
+    }
+
+    .feature-item:first-child::before {
+        top: 0;
+        height: 8rem;
+    }
+
+    .feature-item:last-child::before {
+        top: calc(8rem + var(--featureIconSize));
+        bottom: 0;
+    }
+
+    .feature-item:last-child .feature-item-content,
+    .feature-item:last-child .feature-screenshot {
+        border-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        position: relative;
+    }
+}
+
+
+/* Inline style for placeholder aspect ratio */
+/* TODO: remove */
+.placeholder-aspect {
+    aspect-ratio: 16 / 9;
+    /* Adjust as needed */
+    background-color: #333;
+    /* Placeholder background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    /* Match design rounding */
+}
+
+.icon-badge {
+    @apply rounded-full bg-brand-purple-light text-brand-gray-light inline-flex items-center justify-center;
+    @apply w-16 h-16 p-3;
+    box-shadow: 0 0 15px theme('colors.brand-purple-highlight / 90%');
+}
+
+
+.platform-icon {
+    height: 4.7rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 1;
+    margin-bottom: 2rem;
 }
