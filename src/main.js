@@ -29,7 +29,7 @@ if (document.querySelector('.screenshot-slider')) {
             //     perPage: 2, // Keep 2 slides
             // },
             767: { // md breakpoint (example - adjust as needed)
-                 perPage: 1, // Show 1 slide on medium screens and below
+                 perPage: 1.5, // Show 1 slide on medium screens and below
                  // Increase the gap 2.5 times (1rem * 2.5 = 2.5rem)
                  gap: '2.5rem',
                  // focus: 'center' will still apply here, centering the single slide

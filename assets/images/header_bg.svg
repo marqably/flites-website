@@ -2,7 +2,7 @@
 <svg width="1600px" height="1211px" viewBox="0 0 1600 1211" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-y2f83t7oxi-1">
-            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#ff00000" offset="0%"></stop>
             <stop stop-color="#050058" offset="100%"></stop>
         </linearGradient>
         <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-y2f83t7oxi-2">
@@ -10,12 +10,8 @@
             <stop stop-color="#6511EB" stop-opacity="0" offset="100%"></stop>
         </radialGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-y2f83t7oxi-3">
-            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#ff00000" stop-opacity="0" offset="0%"></stop>
             <stop stop-color="#140039" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-y2f83t7oxi-4">
-            <stop stop-color="#140039" offset="0%"></stop>
-            <stop stop-color="#000000" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="Startseite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
