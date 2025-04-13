@@ -12,11 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans text-regxl font-normal overflow-x-hidden bg-brand-purple-middark text-brand-gray-light w-full overflow-x-hidden">
+<body class="font-sans text-regxl font-normal overflow-x-hidden text-brand-gray-light w-full overflow-x-hidden {=$bodyClasses}">
 
     
 <!-- ===== Header ===== -->
-<header class="py-2 bg-black" data-inject="header">
+<header class="py-2 {=$navBarClasses}" data-inject="header">
     <div class="container-lg flex justify-between items-center">
         <a href="/" class="text-2xl font-bold text-white self-stretch w-[40%] max-w-[170px] mr-6">
             <img src="./assets/ci/flites-logo-white.svg" alt="Flites Logo" class="w-auto h-full">

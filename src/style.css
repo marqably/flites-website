@@ -8,7 +8,7 @@
     font-family: 'Parkinsans';
     font-style: normal;
     font-weight: 300;
-    /* Corresponds to font-parkinsans-300 */
+
     src: url('./fonts/parkinsans-v1-latin-300.woff2') format('woff2');
 }
 
@@ -18,7 +18,7 @@
     font-family: 'Parkinsans';
     font-style: normal;
     font-weight: 500;
-    /* Corresponds to font-parkinsans-500 */
+
     src: url('./fonts/parkinsans-v1-latin-500.woff2') format('woff2');
 }
 
@@ -71,6 +71,9 @@
     font-weight: 600;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 /* Add custom styles below */
 @layer base {
@@ -488,4 +491,39 @@
     color: #fff;
     opacity: 1;
     margin-bottom: 2rem;
+}
+/** ##### SPECIAL TAGS ##### */
+
+ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.4rem 0;
+}
+
+ol li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.9rem;
+}
+
+ol li::before {
+    content: counter(list-item);
+    counter-increment: list-item;
+    background-color: #8A2BE2;
+    color: white;
+    border-radius: 50%;
+    width: 1.65rem;
+    height: 1.65rem;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+ol li a {
+    color: #8A2BE2;
+    text-decoration: none;
+    font-weight: bold;
 }
