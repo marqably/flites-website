@@ -2,27 +2,25 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.{html,js}", "./src/**/*.{html,js}"], // Adjust according to your project structure
+  content: ["./**/*.{html,js}", "./src/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
-        'brand-purple-highlight': '#cdb9f4', // Example: Light Violet
-        'brand-purple-light': '#8a3ffc', // Example: Light Violet
-        'brand-purple-medium': '#6511EB',  // Example: Dark Violet
-        'brand-purple-dark': '#2a0050',  // Example: Dark Violet
-        'brand-purple-middark': '#140039', // Example: Slightly darker
-        'brand-purple-darkest': '#020008', // Example: Very Dark Violet
-        'brand-cyan': '#22D3EE',         // Example: Cyan
-        'brand-gray-full': '#fff',   // Example: Cool Gray 300
-        'brand-gray-light': '#e0e0e0',   // Example: Cool Gray 300
-        'brand-gray-medium': '#a0a0a0',  // Example: Cool Gray 500
-        'brand-gray-dark': '#1a1a1a',    // Example: Cool Gray 800
+        'brand-purple-highlight': '#cdb9f4',
+        'brand-purple-light': '#8a3ffc',
+        'brand-purple-medium': '#6511EB',
+        'brand-purple-dark': '#2a0050',
+        'brand-purple-middark': '#140039',
+        'brand-purple-darkest': '#020008',
+        'brand-cyan': '#22D3EE',
+        'brand-gray-full': '#fff',
+        'brand-gray-light': '#e0e0e0',
+        'brand-gray-medium': '#a0a0a0',
+        'brand-gray-dark': '#1a1a1a',  
       },
       fontFamily: {
-        // Set Roboto Flex as the default sans-serif font
         sans: ['"Roboto Flex"', ...defaultTheme.fontFamily.sans],
-        // Define Parkinsans as a separate font family for headings or specific use
-        heading: ['"Parkinsans"', ...defaultTheme.fontFamily.sans], // Fallback to sans
+        heading: ['"Parkinsans"', ...defaultTheme.fontFamily.sans],
 
       },
       fontSize: {
@@ -32,13 +30,13 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
-        'gradient-linear-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))', // If you need specific named linear gradients
+        'gradient-linear-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
       },
       container: {
         center: true,
-        padding: '1rem', // Default padding for containers
+        padding: '1rem',
       },
-      borderRadius: { // Example: Add custom border radius if needed
+      borderRadius: {
         '4xl': '2rem',
       }
     },

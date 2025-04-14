@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import htmlInject from 'vite-plugin-html-inject' // <-- Change to default import
+import htmlInject from 'vite-plugin-html-inject'
 import { resolve } from 'path'
 
 export default defineConfig({
@@ -12,12 +12,13 @@ export default defineConfig({
     port: 3000
   },
   build: {
+    assetsDir: 'assets',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
         installation: resolve(__dirname, 'installation.html'),
-        imprint: resolve(__dirname, 'imprint.html'),
       },
     },
-  }
+  },
+  publicDir: 'public',
 }) 

@@ -32,13 +32,6 @@ jobs:
         run: npm install
       - name: Build static site
         run: npm run build
-      - name: Check build output
-        run: |
-          echo "--- Listing dist directory ---"
-          ls -l dist
-          echo "--- Contents of dist/index.html ---"
-          cat dist/index.html
-          echo "--- End of dist/index.html ---"
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

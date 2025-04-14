@@ -161,13 +161,15 @@ html {
     }
 
     .btn {
-        @apply relative inline-flex px-5 py-2 rounded-[15px] items-center;
+        @apply relative inline-flex px-5 rounded-[15px] items-center;
         @apply border-2 border-brand-purple-medium border-solid;
         @apply text-white font-semibold no-underline transition duration-200;
         @apply bg-brand-purple-light hover:bg-brand-purple-medium;
         font-size:1.188rem;
         line-height:1em;
         white-space: nowrap;
+        padding-top:0.43rem;
+        padding-bottom:0.43rem;
     }
 }
 
