@@ -7,9 +7,10 @@
 <main class="w-full overflow-hidden">
     <!-- ===== Hero Section ===== -->
     <section class="pt-16 md:pt-24 ext-center md:text-left relative overflow-hidden"
+             id="hero-section"
              style="background-repeat:repeat-x;background-image: url(./assets/images/header_bg.svg); background-size: contain; background-position: center top;">
-        <div class="container grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div>
+        <div class="container grid md:grid-cols-2 gap-12 items-center relative">
+            <div class="relative z-20">
                 <span class="text-brand-gray-light font-semibold">Meet flites</span>
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white my-4">
                     The
@@ -39,9 +40,9 @@
                     </a>
                 </div>
             </div>
-            <div class="flex justify-center items-center">
-                <!-- Placeholder for Pixel Ghost -->
-                <img src="./assets/democontent/ghost.svg" alt="Pixel Ghost" class="max-w-[90vw]">
+            <div class="flex justify-center items-center" id="hero-char-container">
+                    <img src="./assets/democontent/ghost.svg" id="flites-hero-char" alt="Pixel Ghost" class="absolute top-0 left-0 max-w-full h-auto transition-transform duration-100 ease-out pointer-events-none select-none">
+                </div>
             </div>
         </div>
 

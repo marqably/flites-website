@@ -529,3 +529,38 @@ ol li a {
     text-decoration: none;
     font-weight: bold;
 }
+/* ########## HERO CHARACTERS ########## */
+
+#hero-char-container {
+    position: relative;
+    min-height: 300px;
+    width: 90%;
+    max-width: 500px;
+    cursor: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#flites-hero-char {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform 0.05s linear;
+    will-change: transform;
+    z-index: 10;
+}
+
+.ghost-trail {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.1s linear;
+    will-change: transform, opacity;
+    z-index: 5;
+}
