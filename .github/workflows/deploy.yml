@@ -21,7 +21,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
-      FLITES_HEAD_SCRIPTS: ${{ vars.FLITES_HEAD_SCRIPTS }}
+      FLITES_WEB_HEAD_SCRIPTS: ${{ vars.FLITES_WEB_HEAD_SCRIPTS }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -35,13 +35,13 @@ jobs:
       - name: Build static site
         run: npm run build
       - name: Inject Head Scripts
-        if: env.FLITES_HEAD_SCRIPTS != ''
+        if: env.FLITES_WEB_HEAD_SCRIPTS != ''
         run: |
           echo "Injecting head scripts"
-          echo "FLITES_HEAD_SCRIPTS: ${{ env.FLITES_HEAD_SCRIPTS }}"
-          find ./dist -type f -name '*.html' -exec sed -i "s#<!-- INJECT HEAD SCRIPTS PLACEHOLDER -->#${FLITES_HEAD_SCRIPTS}#" {} +
+          echo "FLITES_WEB_HEAD_SCRIPTS: ${{ env.FLITES_WEB_HEAD_SCRIPTS }}"
+          find ./dist -type f -name '*.html' -exec sed -i "s#<!-- INJECT HEAD SCRIPTS PLACEHOLDER -->#${FLITES_WEB_HEAD_SCRIPTS}#" {} +
         env:
-          FLITES_HEAD_SCRIPTS: ${{ env.FLITES_HEAD_SCRIPTS }}
+          FLITES_WEB_HEAD_SCRIPTS: ${{ env.FLITES_WEB_HEAD_SCRIPTS }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
