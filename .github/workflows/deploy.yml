@@ -40,6 +40,13 @@ jobs:
         run: npm install # Or yarn install
       - name: Build static site
         run: npm run build # This executes 'vite build' which runs vite-plugin-html-inject
+      - name: Check build output
+        run: |
+          echo "--- Listing dist directory ---"
+          ls -l dist
+          echo "--- Contents of dist/index.html ---"
+          cat dist/index.html
+          echo "--- End of dist/index.html ---"
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
