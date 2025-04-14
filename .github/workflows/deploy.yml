@@ -38,8 +38,12 @@ jobs:
         if: env.FLITES_WEB_HEAD_SCRIPTS != ''
         run: |
           echo "Injecting head scripts"
-          echo "FLITES_WEB_HEAD_SCRIPTS: ${{ env.FLITES_WEB_HEAD_SCRIPTS }}"
-          find ./dist -type f -name '*.html' -exec sed -i "s#<!-- INJECT HEAD SCRIPTS PLACEHOLDER -->#${FLITES_WEB_HEAD_SCRIPTS}#" {} +
+          # Escape characters special to sed's replacement string (&, \, and the delimiter #)
+          ESCAPED_SCRIPTS=$(echo "${FLITES_WEB_HEAD_SCRIPTS}" | sed -e 's/[&\\#]/\\&/g')
+          
+          echo "Finding HTML files in ./dist and injecting scripts..."
+          find ./dist -type f -name '*.html' -exec sed -i "s#<!-- INJECT HEAD SCRIPTS PLACEHOLDER -->#${ESCAPED_SCRIPTS}#" {} +
+          echo "Injection complete."
         env:
           FLITES_WEB_HEAD_SCRIPTS: ${{ env.FLITES_WEB_HEAD_SCRIPTS }}
       - name: Setup Pages
