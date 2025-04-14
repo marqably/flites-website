@@ -3,6 +3,402 @@
     navBarClasses="bg-black" 
     bodyClasses="bg-brand-purple-middark"
 />
-Test
+
+<main class="w-full overflow-hidden">
+    <!-- ===== Hero Section ===== -->
+    <section class="pt-16 md:pt-24 ext-center md:text-left relative overflow-hidden"
+             style="background-repeat:repeat-x;background-image: url(./assets/images/header_bg.svg); background-size: contain; background-position: center top;">
+        <div class="container grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <span class="text-brand-gray-light font-semibold">Free & open-source</span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white my-4">
+                    The
+                    <span class="text-gradient-brand">
+                        Sprite generator
+                    </span>
+                    that let's you focus on what makes your project unique.
+                </h1>
+                <p class="text-brand-gray-light py-9 mb-8">
+                    Meet flites, the powerful sprite image generator built with Flutter, designed specifically for
+                    creators working with 2D and 2.5D game engines like Flutter Flame, Godot, GameMaker Studio, RPG
+                    Maker, and more.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
+                    <a href="#"
+                       class="btn mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        &nbsp;
+                        View on Github
+                    </a>
+                    <a href="#" class="btn-gradient-border">
+                        <span class="btn-gradient-border-inner">
+                            Docs
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <!-- Placeholder for Pixel Ghost -->
+                <img src="./assets/democontent/ghost.svg" alt="Pixel Ghost" class="max-w-[90vw]">
+            </div>
+        </div>
+
+        <!-- ===== Sponsors Section ===== -->
+        <div class="pt-24 pb-0">
+            <div class="container text-center">
+                <p class="text-sm text-brand-gray-full font-bold mb-10">Sponsored by</p>
+                <div class="flex justify-center items-center space-x-8 md:space-x-12 mb-8">
+                    <a href="https://marqably.com" target="_blank" class="opacity-50 h-7 hover:opacity-100">
+                        <img src="./assets/images/sponsors/marqably-logo.svg" alt="marqably" class="w-auto h-full">
+                    </a>
+                    <a href="https://marqably.com" target="_blank" class="opacity-50 h-7 hover:opacity-100">
+                        <img src="./assets/images/sponsors/marqably-logo.svg" alt="marqably" class="w-auto h-full">
+                    </a>
+                    <a href="https://marqably.com" target="_blank" class="opacity-50 h-7 hover:opacity-100">
+                        <img src="./assets/images/sponsors/marqably-logo.svg" alt="marqably" class="w-auto h-full">
+                    </a>
+                </div>
+
+                <a href="#" class="btn-gradient-border mt-10">
+                        <span class="btn-gradient-border-inner py-3">
+                            Become a Sponsor
+                        </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="h-32 md:h-48 bg-gradient-to-b from-transparent to-brand-purple-darkest w-full">
+            &nbsp;
+        </div>
+    </section>
+
+
+    <!-- ===== Features Intro ===== -->
+    <section class="py-16 md:py-24 bg-brand-purple-darkest">
+        <div class="container lg:flex">
+
+            <div class="lg:w-1/2">
+                <div class="inline-block mb-6 relative xl:-translate-x-[55%]">
+                    <div class="icon-badge">
+                        <img src="./assets/images/icons/icon-target.svg" alt="Target icon" class="w-full h-full object-contain">
+                    </div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 max-w-[400px]" data-aos="fade-up">
+                    A sprite generator for pixel perfection
+                </h2>
+            </div>
+
+            <div class="lg:w-1/2 mt-16">
+                <p class="text-brand-gray-light mb-6 font-sans-500" data-aos="fade-up">
+                    With flites, effortlessly transform standard asset images into dynamic, perfectly smooth sprites.
+                    The intuitive interface simplifies combining, scaling, adjusting, rotating, and positioning
+                    animations, ensuring your sprites move seamlessly in-game.
+                </p>
+                <p class="text-brand-gray-light font-sans-300" data-aos="fade-up">
+                    Whether you're crafting pixel-perfect platformers or immersive RPG worlds, flites streamlines your
+                    workflow, empowering you to bring your game visions to life faster and smoother than ever.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Slider Section ===== -->
+    <section class="md:pt-6 md:pb-12 relative bg-gradient-to-b from-brand-purple-darkest to-brand-purple-middark">
+        <!-- Update slider structure for Splide -->
+        <div class="splide screenshot-slider pt-24 mb-6 pb-20" aria-label="Application Screenshots">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <!-- Placeholder Slides -->
+                    <li class="splide__slide screenshot-slide-item">
+                        <div class="placeholder-aspect">App Screenshot 1</div>
+                    </li>
+                    <li class="splide__slide screenshot-slide-item">
+                        <div class="placeholder-aspect">App Screenshot 2</div>
+                    </li>
+                    <li class="splide__slide screenshot-slide-item">
+                        <div class="placeholder-aspect">App Screenshot 3</div>
+                    </li>
+                    <li class="splide__slide screenshot-slide-item">
+                        <div class="placeholder-aspect">App Screenshot 4</div>
+                    </li>
+                    <li class="splide__slide screenshot-slide-item">
+                        <div class="placeholder-aspect">App Screenshot 5</div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Splide adds its own controls/pagination here if enabled -->
+        </div>
+
+    </section>
+
+    <!-- ===== Detailed Features Section ===== -->
+    <section class="py-16 md:py-24 ml-0 md:ml-4 xl:ml-0 relative bg-brand-purple-middark">
+        <div class="container">
+
+            <!-- Feature Item 1 -->
+            <div class="feature-item">
+                <div class="feature-item-inner">
+                    <div class="relative feature-screenshot">
+                        <div class="placeholder-aspect" data-aos="fade-left">App Screenshot Feature 1</div>
+                    </div>
+                    <div class="feature-item-content">
+                        <div class="feature-icon-outer">
+                            <div class="feature-icon" data-aos="zoom-in">
+                                <img src="./assets/images/icons/icon-layers.svg" alt="Natural Workflow icon"
+                                     class="w-8 h-8">
+                            </div>
+                        </div>
+                        <div class="feature-body">
+                            <h3 class="feature-title" data-aos="fade-right"><span class="text-gradient-brand">Natural Workflow</span>
+                            </h3>
+                            <p data-aos="fade-right">Stack frames exactly where they belong - no spacing
+                                calculations needed.</p>
+                            <p data-aos="fade-right">The app automatically transforms your aligned layers into a
+                                production-ready sprite sheet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-item-bubble"></div>
+            </div>
+
+            <!-- Feature Item 2 -->
+            <div class="feature-item">
+                <div class="feature-item-bubble"></div>
+                <div class="feature-item-inner">
+                    <div class="relative feature-screenshot">
+                        <div class="placeholder-aspect" data-aos="fade-left">App Screenshot Feature 2</div>
+                    </div>
+                    <div class="feature-item-content">
+                        <div class="feature-icon-outer">
+                            <div class="feature-icon" data-aos="zoom-in">
+                                <img src="./assets/images/icons/icon-play.svg" alt="Player Preview icon"
+                                     class="w-8 h-8">
+                            </div>
+                        </div>
+                        <div class="feature-body">
+                            <h3 class="feature-title" data-aos="fade-right"><span
+                                    class="text-gradient-brand">Player Preview</span></h3>
+                            <p data-aos="fade-right">Just press play, and the built-in player will cycle through
+                                each layer, previewing your sprite animation in real time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Item 3 -->
+            <div class="feature-item">
+                <div class="feature-item-bubble"></div>
+                <div class="feature-item-inner">
+                    <div class="relative feature-screenshot">
+                        <div class="placeholder-aspect" data-aos="fade-left">App Screenshot Feature 3</div>
+                    </div>
+                    <div class="feature-item-content">
+                        <div class="feature-icon-outer">
+                            <div class="feature-icon" data-aos="zoom-in">
+                                <img src="./assets/images/icons/icon-rotate.svg"
+                                     alt="Rotation and transformation tools icon" class="w-8 h-8">
+                            </div>
+                        </div>
+                        <div class="feature-body">
+                            <h3 class="feature-title" data-aos="fade-right"><span class="text-gradient-brand">Rotation and transformation tools</span>
+                            </h3>
+                            <p data-aos="fade-right">Need to adjust your sprite? Rotate, resize, and reposition
+                                elements effortlessly to get the perfect angle and size.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Item 4 -->
+            <div class="feature-item">
+                <div class="feature-item-bubble"></div>
+                <div class="feature-item-inner">
+                    <div class="relative feature-screenshot">
+                        <div class="placeholder-aspect" data-aos="fade-left">App Screenshot Feature 4</div>
+                    </div>
+                    <div class="feature-item-content">
+                        <div class="feature-icon-outer">
+                            <div class="feature-icon" data-aos="zoom-in">
+                                <img src="./assets/images/icons/icon-export.svg" alt="Export options icon"
+                                     class="w-8 h-8">
+                            </div>
+                        </div>
+                        <div class="feature-body">
+                            <h3 class="feature-title" data-aos="fade-right"><span
+                                    class="text-gradient-brand">Export Options</span></h3>
+                            <p data-aos="fade-right">Customize your sprite exports with adjustable scaling and
+                                padding, ensuring your assets fit perfectly into your project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Item 5 -->
+            <div class="feature-item">
+                <div class="feature-item-bubble"></div>
+                <div class="feature-item-inner">
+                    <div class="relative feature-screenshot">
+                        <div class="placeholder-aspect" data-aos="fade-left">App Screenshot Feature 5</div>
+                    </div>
+                    <div class="feature-item-content">
+                        <div class="feature-icon-outer">
+                            <div class="feature-icon" data-aos="zoom-in">
+                                <img src="./assets/images/icons/icon-control.svg" alt="Canvas controls icon"
+                                     class="w-8 h-8">
+                            </div>
+                        </div>
+                        <div class="feature-body">
+                            <h3 class="feature-title" data-aos="fade-right"><span
+                                    class="text-gradient-brand">Canvas Controls</span></h3>
+                            <p data-aos="fade-right">Visualize Bounding Border. Sort files by name. Rename
+                                files.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Simple vertical line connectors will appear via CSS :before pseudo-elements -->
+    </section>
+
+    <!-- ===== Platforms Section ===== -->
+    <div class="bg-brand-purple-middark">
+        <section class="py-16 md:py-32 text-center relative">
+            <div class="absolute left-0 right-0 pointer-events-none"
+                 style="top:-100%;bottom:-100%;background-repeat:no-repeat;background-position:center;background-size:contain; background-image:url('/assets/images/workflow-bubble.svg');"></div>
+            <div class="container relative z-10">
+                <h2 class="text-3xl md:text-5xl font-bold text-white">On every platform!</h2>
+                <p class="text-brand-gray-light text-2xl font-medium mb-28 mt-8">Thanks to Flutter 💙</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-2xl mx-auto">
+                    <!-- Platform Items -->
+                    <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="500">
+                        <div class="platform-icon">
+                            <img src="./assets/images/icons/icon-platform-windows.svg" alt="Windows Logo">
+                        </div>
+                        <a href="#"
+                           class="btn-gradient-border">
+                       <span class="btn-gradient-border-inner">
+                        Windows
+                       </span>
+                        </a>
+                    </div>
+                    <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="platform-icon">
+                            <img src="./assets/images/icons/icon-platform-linux.svg" alt="Linux Logo">
+                        </div>
+                        <a href="#"
+                           class="btn-gradient-border">
+                       <span class="btn-gradient-border-inner">
+                            Linux
+                        </span>
+                        </a>
+                    </div>
+                    <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="platform-icon">
+                            <img src="./assets/images/icons/icon-platform-macos.svg" alt="MacOs icon">
+                        </div>
+                        <a href="#"
+                           class="btn-gradient-border"><span class="btn-gradient-border-inner">MacOS</span>
+
+                        </a>
+                    </div>
+                    <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="platform-icon">
+                            <img src="./assets/images/icons/icon-platform-web.svg" alt="WebApp icon">
+                        </div>
+                        <a href="#"
+                           class="btn-gradient-border">
+                       <span class="btn-gradient-border-inner">
+                            Web App
+                       </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Quote Section ===== -->
+        <section class="py-16 md:mt-10 md:py-24 relative" style="z-index:1;">
+            <div class="container grid md:grid-cols-2 gap-12 items-start">
+                <div class="md:col-span-1">
+                    <div class="pb-8 md:absolute md: xl:-translate-x-[55%] md:-translate-y-[100%]">
+                        <div class="icon-badge">
+                            <img src="./assets/images/icons/icon-rocket.svg" alt="Rocket Icon" class="w-full h-full object-contain">
+                        </div>
+                    </div>
+                    <div class="text-4xl font-heading font-light text-white leading-relaxed">
+                        "... maybe we can build something to speed up the process for the next time..."
+                    </div>
+                </div>
+                <div class="text-brand-gray-light space-y-4">
+                    <p class="font-semibold">A sprite animation has to be perfectly aligned to ensure a smooth look and a great feel. This can
+                        be
+                        quite tedious when building them manually. We searched for a tool to streamline the process but
+                        couldn't find one that fit our needs - so we started building one and made it open source.</p>
+                    <p>Our goal is to make sprite creation faster, more intuitive, and less time consuming. We hope the
+                        tool
+                        can grow with the community and be shaped by those who need it most.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== Contribute Section ===== -->
+        <section class="py-16 md:py-24">
+            <div class="container">
+                <div class="bg-brand-purple-darkest border border-solid border-brand-purple-medium rounded-3xl p-8 md:p-16 mx-auto">
+                    <div class="text-center mb-8">
+                        <h2 class="text-5xl font-bold text-white mb-2">Contribute!</h2>
+                        <p class="text-brand-gray-light">For and by the community 💙</p>
+                    </div>
+                    <div class="mt-24 grid md:grid-cols-2 gap-24">
+                        <div class="">
+                            <p class="text-brand-gray-light mb-8 font-sans-500">We love Flutter and open source! That's why we're
+                                building
+                                Flites in the open - because great tools get even better with community input.</p>
+                            <p class="text-brand-gray-light font-sans-300">Whether you want to report a bug, suggest a feature, or
+                                contribute code, we'd love to have you on board.</p>
+                        </div>
+                        <div class="space-y-12 font-light">
+                            <div data-aos="fade-left" data-aos-duration="1400">
+                                <h4 class="font-semibold text-white mb-1"><span class="text-gradient-brand">Spread the word</span></h4>
+                                <p class="text-brand-gray-light">
+                                    The simplest form of support is to just get the word out there.
+                                    Reddit, x, bluesky it to the world and support us &lt;3
+                                </p>
+
+
+                            </div>
+                            <div data-aos="fade-left" data-aos-duration="1400">
+                                <h4 class="font-semibold text-white mb-1"><span class="text-gradient-brand">Report Issues</span></h4>
+                                <p class="text-brand-gray-light">Found a bug? Let us know in the <a href="#"
+                                                                                                    class="text-brand-purple-light hover:underline">issue
+                                    tracker</a>.</p>
+                            </div>
+                            <div data-aos="fade-left" data-aos-duration="1400">
+                                <h4 class="font-semibold text-white mb-1"><span class="text-gradient-brand">Suggest Features</span></h4>
+                                <p class="text-brand-gray-light">Share ideas in <a href="#"
+                                                                                           class="text-brand-purple-light hover:underline">Github
+                                    Discussions</a>.</p>
+                            </div>
+                            <div data-aos="fade-left" data-aos-duration="1400">
+                                <h4 class="font-semibold text-white mb-1"><span class="text-gradient-brand">Code Contributions</span></h4>
+                                <p class="text-brand-gray-light">Pick an issue, submit a PR, and help improve
+                                    flites.</p>
+                            </div>
+                            <div class="pt-12 text-lg" data-aos="fade-left" data-aos-duration="1400">
+                                <p class="text-brand-gray-light">Check out our <a href="#" class="text-brand-purple-light hover:underline font-bold">Contributing
+                                    Guide</a> for details<br /> on how to get started!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</main>
 
 <load src="/src/partials/footer.html" footerClasses="bg-brand-purple-darkest" />
