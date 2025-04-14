@@ -38,10 +38,13 @@ jobs:
         if: env.FLITES_WEB_HEAD_SCRIPTS != ''
         run: |
           echo "Injecting head scripts"
-          # Escape characters special to sed's replacement string (&, \, and the delimiter #)
-          ESCAPED_SCRIPTS=$(echo "${FLITES_WEB_HEAD_SCRIPTS}" | sed -e 's/[&\\#]/\\&/g')
-          
+          # Escape characters special to sed's replacement string (&, \, #, and newline)
+          # The sed command reads all lines (:a;N;$!ba;), then substitutes special chars including newline (\n)
+          # We replace & with \&, \ with \\, # with \#, and newline with \n (literal backslash-n)
+          ESCAPED_SCRIPTS=$(echo "${FLITES_WEB_HEAD_SCRIPTS}" | sed -e ':a' -e 'N' -e '$!ba' -e 's/[&\\#]/\\&/g; s/\n/\\n/g')
+
           echo "Finding HTML files in ./dist and injecting scripts..."
+          # Now use the properly escaped (including newlines) variable
           find ./dist -type f -name '*.html' -exec sed -i "s#<!-- INJECT HEAD SCRIPTS PLACEHOLDER -->#${ESCAPED_SCRIPTS}#" {} +
           echo "Injection complete."
         env:
