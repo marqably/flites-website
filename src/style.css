@@ -462,19 +462,30 @@ html {
 
 
 /* Inline style for placeholder aspect ratio */
-/* TODO: remove */
-.placeholder-aspect {
+.screenshot-carousel-item {
     aspect-ratio: 16 / 9;
-    /* Adjust as needed */
-    background-color: #333;
-    /* Placeholder background */
+    background: #333 no-repeat center center;
+        background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #888;
     font-size: 0.8rem;
     border-radius: 0.5rem;
-    /* Match design rounding */
+}
+
+.screenshot-carousel-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.screenshot-slide-item-label {
+    display: block;
+    margin: 0 0 1.4rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    opacity: 0.7;
 }
 
 .icon-badge {

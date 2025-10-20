@@ -103,20 +103,41 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <!-- Placeholder Slides -->
-                    <li class="splide__slide screenshot-slide-item">
-                        <div class="placeholder-aspect">App Screenshot 1</div>
+                    <li class="splide__slide screenshot-slide-item-outer">
+                        <div class="screenshot-slide-item-label">Pixel perfect positioning</div>
+                        <div class="screenshot-slide-item"><div class="screenshot-carousel-item">
+                            <figure>
+                                <img src="/assets/images/screenshots/flites-positioning.jpg" alt="Screenshot showing positioning tools" />
+                            </figure>
+                        </div>
+                        </div>
                     </li>
-                    <li class="splide__slide screenshot-slide-item">
-                        <div class="placeholder-aspect">App Screenshot 2</div>
+                    <li class="splide__slide screenshot-slide-item-outer">
+                        <div class="screenshot-slide-item-label">Interactive hitbox editor</div>
+                        <div class="screenshot-slide-item"><div class="screenshot-carousel-item">
+                            <figure>
+                                <img src="/assets/images/screenshots/flites-hitbox-editor.jpg" alt="Screenshot showing hitbox editor" />
+                            </figure>
+                        </div>
+                        </div>
                     </li>
-                    <li class="splide__slide screenshot-slide-item">
-                        <div class="placeholder-aspect">App Screenshot 3</div>
+                    <li class="splide__slide screenshot-slide-item-outer">
+                        <div class="screenshot-slide-item-label">Simple multi animation animation</div>
+                        <div class="screenshot-slide-item"><div class="screenshot-carousel-item">
+                            <figure>
+                                <img src="/assets/images/screenshots/flites-animation-tabs.jpg" alt="Screenshot showing multiple animation steps" />
+                            </figure>
+                        </div>
+                        </div>
                     </li>
-                    <li class="splide__slide screenshot-slide-item">
-                        <div class="placeholder-aspect">App Screenshot 4</div>
-                    </li>
-                    <li class="splide__slide screenshot-slide-item">
-                        <div class="placeholder-aspect">App Screenshot 5</div>
+                    <li class="splide__slide screenshot-slide-item-outer">
+                        <div class="screenshot-slide-item-label">Advanced editing features</div>
+                        <div class="screenshot-slide-item"><div class="screenshot-carousel-item">
+                            <figure>
+                                <img src="/assets/images/screenshots/flites-rotation.jpg" alt="Screenshot showing rotation tool" />
+                            </figure>
+                        </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -296,7 +317,9 @@
                 <div class="feature-item-bubble"></div>
                 <div class="feature-item-inner">
                     <div class="relative feature-screenshot">
-                        <video src="/assets/images/screenshots/7_canvas_controls.mp4" autoplay loop muted playsinline
+                        <video src="/assets/images/screenshots/7_canvas_controls.mp4" 
+                            autoplay loop muted playsinline
+                            title="Video showing Precise Canvas Controls"
                             data-aos="fade-left" title="Real-time Animation Preview"
                             class="w-full h-full object-contain placeholder-aspect"></video>
                     </div>
@@ -338,7 +361,9 @@
                     <!-- Platform Items -->
                     <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="500">
                         <div class="platform-icon">
-                            <img src="./assets/images/icons/icon-platform-windows.svg" alt="Windows Logo">
+                            <a href="https://flites-api.stage.jetzt/download-windows" download>
+                                <img src="./assets/images/icons/icon-platform-windows.svg" alt="Windows Logo">
+                            </a>
                         </div>
                         <a href="https://flites-api.stage.jetzt/download-windows" download class="btn-gradient-border">
                             <span class="btn-gradient-border-inner">
@@ -348,9 +373,11 @@
                     </div>
                     <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000">
                         <div class="platform-icon">
-                            <img src="./assets/images/icons/icon-platform-linux.svg" alt="Linux Logo">
+                            <a href="/installation.html#linux" target="_blank">
+                                <img src="./assets/images/icons/icon-platform-linux.svg" alt="Linux Logo">
+                            </a>
                         </div>
-                        <a href="/installation.html#linux" class="btn-gradient-border">
+                        <a href="/installation.html#linux" target="_blank" class="btn-gradient-border">
                             <span class="btn-gradient-border-inner">
                                 Linux
                             </span>
@@ -358,16 +385,19 @@
                     </div>
                     <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="1500">
                         <div class="platform-icon">
-                            <img src="./assets/images/icons/icon-platform-macos.svg" alt="MacOs icon">
+                            <a href="https://apps.apple.com/us/app/flites-sprite-generator/id6745398480" target="_blank">
+                                <img src="./assets/images/icons/icon-platform-macos.svg" alt="MacOs icon">
+                            </a>
                         </div>
-                        <a href="https://flites-api.stage.jetzt/download-macos" download
-                            class="btn-gradient-border"><span class="btn-gradient-border-inner">MacOS</span>
-
+                        <a href="https://apps.apple.com/us/app/flites-sprite-generator/id6745398480" class="btn-gradient-border" target="_blank">
+                            <span class="btn-gradient-border-inner">MacOS</span>
                         </a>
                     </div>
                     <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="2000">
                         <div class="platform-icon">
-                            <img src="./assets/images/icons/icon-platform-web.svg" alt="WebApp icon">
+                            <a href="https://web.flites.app" target="_blank">
+                                <img src="./assets/images/icons/icon-platform-web.svg" alt="WebApp icon">
+                            </a>
                         </div>
                         <a href="https://web.flites.app" target="_blank" class="btn-gradient-border">
                             <span class="btn-gradient-border-inner">
